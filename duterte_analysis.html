@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"Do Not Destroy My Country": Duterte's Drug War in His Own Words</title>
+<style>
+  :root {
+    --ink: #1c1a17;
+    --ink-soft: #4a4640;
+    --paper: #faf7f2;
+    --paper-alt: #f1ece3;
+    --accent: #8c1f1f;
+    --accent-soft: #c9a959;
+    --line: #d9d0c1;
+    --pos: #2f5d4f;
+    --pos-bg: #eaf2ee;
+    --neg: #8c1f1f;
+    --neg-bg: #f7eae8;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+    --sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    line-height: 1.7;
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  header.masthead {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 64px 28px 48px;
+    text-align: center;
+    border-bottom: 3px solid var(--accent);
+  }
+
+  header.masthead .kicker {
+    font-family: var(--sans);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+
+  header.masthead h1 {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    margin: 0 0 14px;
+    font-weight: 700;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--ink);
+  }
+
+  header.masthead p.subtitle {
+    font-family: var(--sans);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  header.masthead .byline {
+    margin-top: 28px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a89f8f;
+  }
+
+  section {
+    margin-top: 56px;
+  }
+
+  h2.section-title {
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+  }
+
+  h3.subsection-title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin: 36px 0 14px;
+  }
+
+  p { margin: 0 0 18px; font-size: 1.03rem; }
+
+  .lede::first-letter {
+    font-size: 3.4rem;
+    float: left;
+    line-height: 0.8;
+    padding-right: 8px;
+    padding-top: 6px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  sup.fn a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  /* Figure images */
+  figure.img-placeholder {
+    margin: 32px 0;
+    border: 1px solid var(--line);
+    background: #fffdf9;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  figure.img-placeholder img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  figure.img-placeholder figcaption {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    padding: 12px 18px;
+    border-top: 1px solid var(--line);
+    background: #fffdf9;
+  }
+
+  /* Sentence tables */
+  .table-wrap {
+    margin: 20px 0 32px;
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+
+  table.sentence-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    background: #fffdf9;
+  }
+
+  table.sentence-table caption {
+    caption-side: top;
+    text-align: left;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    padding: 14px 18px 4px;
+  }
+
+  table.sentence-table thead th {
+    font-family: var(--sans);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+    text-align: left;
+    padding: 10px 14px;
+    color: var(--paper);
+    background: var(--ink);
+  }
+
+  table.sentence-table.positive thead th { background: var(--pos); }
+  table.sentence-table.negative thead th { background: var(--neg); }
+
+  table.sentence-table td {
+    padding: 12px 14px;
+    border-top: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  table.sentence-table td.rank {
+    font-weight: 700;
+    text-align: center;
+    width: 42px;
+  }
+
+  table.sentence-table td.score {
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    width: 70px;
+    font-weight: 700;
+  }
+
+  table.sentence-table.positive td.score { color: var(--pos); }
+  table.sentence-table.negative td.score { color: var(--neg); }
+
+  table.sentence-table td.speech {
+    white-space: nowrap;
+    color: var(--ink-soft);
+    width: 150px;
+    font-size: 0.85rem;
+  }
+
+  table.sentence-table tbody tr:nth-child(even) {
+    background: var(--paper-alt);
+  }
+
+  blockquote.pull {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--ink);
+    border-left: 4px solid var(--accent);
+    margin: 32px 0;
+    padding: 4px 0 4px 22px;
+  }
+
+  .callout {
+    background: var(--paper-alt);
+    border-left: 4px solid var(--accent-soft);
+    padding: 16px 20px;
+    border-radius: 4px;
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin: 28px 0;
+  }
+
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 56px 0;
+  }
+
+  /* Bibliography */
+  .bib-entry {
+    font-size: 0.92rem;
+    margin-bottom: 14px;
+    padding-left: 1.6em;
+    text-indent: -1.6em;
+  }
+  .bib-entry a { color: var(--accent); word-break: break-word; }
+
+  /* Footnotes */
+  #footnotes {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+  #footnotes ol { padding-left: 1.2em; }
+  #footnotes li { margin-bottom: 8px; }
+  #footnotes a { color: var(--accent); }
+  #footnotes .back { text-decoration: none; margin-left: 4px; }
+
+  footer.page-footer {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a89f8f;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 640px) {
+    header.masthead h1 { font-size: 1.7rem; }
+    .wrap { padding: 0 16px 80px; }
+    table.sentence-table td.speech { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="kicker">Quantitative Text Analysis &middot; Case Study</div>
+  <h1>&ldquo;Do Not Destroy My Country&rdquo;: Duterte&rsquo;s Drug War in His Own Words</h1>
+  <p class="subtitle">A Descriptive Analysis of Rodrigo Duterte's Drug War Rhetoric Using Text-as-Data Methods</p>
+  <div class="byline">By Sofia Tomacruz</div>
+</header>
+
+<div class="wrap">
+
+  <section id="introduction">
+    <h2 class="section-title">Introduction</h2>
+    <p class="lede">Over a year before the 2016 Philippine Presidential Elections, Rodrigo Duterte, who was at the time the mayor of Davao City, said he would seek the presidency if only to save the nation from war.<sup class="fn"><a href="#fn1" id="fnref1">1</a></sup> &ldquo;I can make this sacrifice if only to save the country from being fractured,&rdquo; he declared. The war, he claimed, was a war against criminals and corruption &mdash; problems that had plagued the country for decades. &ldquo;What am I there for, except to strike your hearts if you are a violator of the law?&rdquo;<sup class="fn"><a href="#fn2" id="fnref2">2</a></sup> he said.</p>
+
+    <p>As Duterte embarked on a year-long &ldquo;listening tour&rdquo; across the Philippines, he flip-flopped between declaring his presidential ambitions and claiming he never really wanted to run. But despite this inconsistency, he never failed to warn the public: &ldquo;It's going to be bloody.&rdquo;<sup class="fn"><a href="#fn3" id="fnref3">3</a></sup> &ldquo;When I become president, I'll order the police and the military to find these people and kill them,&rdquo; he told a crowd just two months before the May 2016 presidential elections. &ldquo;Kill them all,&rdquo;<sup class="fn"><a href="#fn4" id="fnref4">4</a></sup> he said, as he campaigned against criminals and drug syndicates.</p>
+
+    <p>That summer, Duterte was elected 16th President of the Republic of the Philippines, riding a wave of 15.8 million<sup class="fn"><a href="#fn5" id="fnref5">5</a></sup> Filipinos who believed in him and his promise of change. It was a promise he stood by, regardless of the trappings of propriety and diplomacy one would expect with the presidency. &ldquo;I am telling everyone, the criminals, the druggies, the rebels. Do not destroy my country because I will kill you, period. No excuses, no apologies, no nothing,&rdquo; he said in 2019.<sup class="fn"><a href="#fn6" id="fnref6">6</a></sup></p>
+
+    <p>Six years after Duterte took office, at least 6,000 people were killed in his administration's anti-illegal drug campaign, though human rights groups estimate the death toll to be over 30,000 people. Those killed were often as poor and neglected<sup class="fn"><a href="#fn7" id="fnref7">7</a></sup> as those he vowed to protect.</p>
+
+    <p>With little legal reckoning for his drug war in the Philippines, Duterte now stands trial for crimes against humanity at the International Criminal Court (ICC) in the Hague. In April 2026, pre-trial judges confirmed there was enough evidence and substantial grounds to believe that the former Philippine president is responsible for the crimes against humanity of murder and attempted murder.<sup class="fn"><a href="#fn8" id="fnref8">8</a></sup></p>
+
+    <p>Both the prosecution and defense are using Duterte's words<sup class="fn"><a href="#fn9" id="fnref9">9</a></sup> as proof of his culpability and innocence. Using 20 of Duterte's speeches to make its case, the prosecution argued that Duterte's own words proved that his &ldquo;criminal plan and his intent were no secret.&rdquo; For the defense, which submitted its own set of 35 speeches, Duterte's words were proof the leader was a &ldquo;unique phenomenon&rdquo; who engaged in hyperbole and blustery rhetoric. How do we make sense of Duterte's words?</p>
+
+    <p>This project aims to provide a descriptive analysis of Duterte's drug war rhetoric using quantitative text analysis methods. By focusing on the following research question &mdash; &ldquo;How did President Rodrigo Duterte talk about drugs, drug users, and his administration's war on drugs?&rdquo; &mdash; this project seeks to illustrate patterns and trends present in Duterte's speeches. In doing so, this text-as-data analysis sketches out the general contours of how the former Philippine leader spoke of his administration's drug war to contribute to the public's understanding of the nature of Duterte's speeches and rhetoric.</p>
+  </section>
+
+  <section id="data-selection">
+    <h2 class="section-title">Data Selection</h2>
+    <p>In researching this topic, the project makes use of a corpus of 1,012 speaking events of Duterte from 2014 to 2020, spanning over 4 million words. The events cover 877 speeches, 117 interviews, 10 speeches with media interviews that followed, 6 official statements, and 2 situation briefings. The data was collected using a mix of methods that included web scraping, manual transcription of interviews and speeches, and manual downloading of speeches collected by reporters over the course of Duterte's presidency from 2016 to 2022. The researcher took part in this effort as a former reporter covering the Duterte administration in the Philippines.</p>
+
+    <figure class="img-placeholder">
+      <img src="media/image001.png" alt="Figure 1. Number of Duterte speaking events by year, 2014&ndash;2020.">
+      <figcaption>Figure 1. Number of Duterte speaking events by year, 2014&ndash;2020.</figcaption>
+    </figure>
+
+    <p>An exploratory look at the data showed Duterte delivered the greatest number of speeches in 2017, with 316 speaking events given (nearly daily when spread across the year). This was followed by 210 speaking events in 2018, 192 in 2016, and 182 in 2019. It should be noted that Duterte assumed office in June 2016 and the height of his drug war took place from this point until 2018. Majority of police operations took place from June 2016 into 2017, while complaints were filed before the ICC in April 2017.<sup class="fn"><a href="#fn10" id="fnref10">10</a></sup> Intense international scrutiny on Duterte's drug war prompted the president to pull the Philippines out of the ICC in March 2018. The decision took effect a year later in March 2019.<sup class="fn"><a href="#fn11" id="fnref11">11</a></sup></p>
+
+    <h3 class="subsection-title">Limitations</h3>
+    <p>Considering the timeline of these key events, data for the project is subject to several limitations. For context, Duterte's current case at the ICC covers his actions as Davao City mayor and Philippine President from 2011 to 2019. The corpus currently does not include Duterte's speaking events from 2011 to 2013 owing to a number of factors, including the lack of streamed events covering his speeches and limited national media attention on Duterte's policies in Davao City as mayor. The corpus likewise does not include speaking events from 2021 and 2022, the last two years of Duterte's presidency, because of shifting priorities in the researcher's newsroom that focused on coverage of the Covid-19 pandemic and the lead-up to the 2022 Philippine presidential elections.</p>
+
+    <p>Despite this, data from the corpus covers Duterte's final year as mayor, the lead-up to his presidential campaign, the election campaign itself, and the first three years of his presidency &mdash; which covered the height of the drug war up until the Philippines left the ICC in 2019. Considering this, the research finds that the corpus is still rich enough to provide a descriptive analysis of Duterte's rhetoric.</p>
+  </section>
+
+  <section id="methodology">
+    <h2 class="section-title">Methodology &amp; Results</h2>
+    <p>This project makes use of four text-as-data methods to provide a descriptive look at Duterte's speaking events from 2014 to 2020: dictionaries and keywords, semantic analysis, topic models, and word embeddings.</p>
+
+    <h3 class="subsection-title">Pre-processing</h3>
+    <p>As part of analyzing the corpus, several pre-processing decisions and limitations are worth noting. First, data was initially stored as a TXT file that was eventually converted to a TSV file for analysis. In doing so, the research utilized a parsing strategy that anchored on date as a delimiter for all documents since this consistently appeared in all 1,012 speaking events.</p>
+
+    <p>The output ended up creating a TSV file with 10 columns &mdash; doc_id, date, time, event, format, location, video_link, text_link, summary, and text &mdash; which contained the full text of the speaking event. This was based on how the speeches were structured during the data collection process, a sample of which could be seen below:</p>
+
+    <figure class="img-placeholder">
+      <img src="media/image002.png" alt="Figure 2. Sample rows from the parsed TSV dataset.">
+      <figcaption>Figure 2. Sample rows from the parsed TSV dataset.</figcaption>
+    </figure>
+
+    <p>To pre-process the text, a list of Tagalog<sup class="fn"><a href="#fn12" id="fnref12">12</a></sup> and Bisaya<sup class="fn"><a href="#fn13" id="fnref13">13</a></sup> stopwords hosted on GitHub provided the foundation for a list of stopwords. Based on the researcher's knowledge, several words were added to the list of Filipino stopwords after several iterations of pre-processing and a look at the top 100 words used in Duterte's speaking events. Conversely, the researcher had limited knowledge of Bisaya. Owing to this, the list of Bisaya stopwords is not as extensive as the Filipino stopwords and could add noise to the analysis of patterns and trends seen across Duterte's speaking events. Confronting this, however, the research leaned on the side of keeping the list of Bisaya stopwords at its current state instead of trying to build it further, to avoid the risk of adding words that could strip the speaking events of important context.</p>
+
+    <p>In addition, a list called &ldquo;speech stopwords&rdquo; also filtered out common words Duterte or transcribers included in the text that did not add context or meaning to Duterte's overall rhetoric. These stopwords included words like &ldquo;applause,&rdquo; &ldquo;translation,&rdquo; &ldquo;inaudible,&rdquo; &ldquo;kindly,&rdquo; &ldquo;sit,&rdquo; &ldquo;just,&rdquo; &ldquo;like,&rdquo; &ldquo;president,&rdquo; &ldquo;ladies,&rdquo; and &ldquo;gentlemen,&rdquo; among others. Following this, standard pre-processing steps were taken to remove numbers, punctuation, URLs, symbols, and stopwords, and to make the text lowercase. No stemming was done to keep words in their original form.</p>
+
+    <h3 class="subsection-title">Descriptive Inference</h3>
+    <p>Following these steps, a search for the top 100 most frequent terms used by Duterte was conducted (a full list of this can be found in the attached PDF/markdown file). This descriptive look also included creating a word cloud to capture these features, as seen below:</p>
+
+    <figure class="img-placeholder">
+      <img src="media/image003.png" alt="Figure 3. Word cloud of most frequent terms in the corpus.">
+      <figcaption>Figure 3. Word cloud of most frequent terms in the corpus.</figcaption>
+    </figure>
+
+    <p>From this, some words already start to stand out. This includes &ldquo;know&rdquo; used 8,565 times, &ldquo;man&rdquo; used 8,345 times, &ldquo;tapos&rdquo; &mdash; which can translate to &ldquo;done,&rdquo; &ldquo;finished,&rdquo; or &ldquo;after&rdquo; &mdash; used 6,282 times, &ldquo;pulis&rdquo; (police) used 3,925 times, &ldquo;police&rdquo; itself used 3,179 times, &ldquo;military&rdquo; used 2,807 times, &ldquo;problema&rdquo; (problem) used 2,702 times, &ldquo;problem&rdquo; itself used 2,103 times, &ldquo;corruption&rdquo; used 2,509 times, &ldquo;drugs&rdquo; used 2,037 times, &ldquo;kill&rdquo; used 1,776 times, and &ldquo;destroy&rdquo; used 1,461 times.</p>
+
+    <p>Building on this, co-occurrences were used to start building a dictionary for drug war terms. To do this, some generic terms were used to filter through the speaking events and build a feature co-occurrence matrix. In particular, the following seed terms were used: drugs, drug, droga, shabu, kill, criminal, police, pulis, patay, patayin. From there, the 15 most frequent co-occurring words for each seed term were found and plotted below:</p>
+
+    <figure class="img-placeholder">
+      <img src="media/image004.png" alt="Figure 4. Top 15 co-occurring words for each seed term.">
+      <figcaption>Figure 4. Top 15 co-occurring words for each seed term.</figcaption>
+    </figure>
+
+    <p>Relevant words were then used to start building a drug war dictionary for later analysis.</p>
+
+    <h3 class="subsection-title">Dictionaries and Keywords</h3>
+    <p>First, the research utilized dictionaries and keywords to explore the frequency of key words in a drug war dictionary created for Duterte's speeches. In building the drug war dictionary, the research used descriptive inference methods like co-occurrences to find words that tend to occur together whenever Duterte spoke, and to find words that may have semantic proximity to words used by Duterte when talking about the drug war. This method added some 31 more words to the researcher's own drug war dictionary, coming to a total of 65 terms. The full list of which is below:</p>
+
+    <figure class="img-placeholder">
+      <img src="media/image005.png" alt="Figure 5. Full list of terms in the drug war dictionary.">
+      <figcaption>Figure 5. Full list of terms in the drug war dictionary.</figcaption>
+    </figure>
+
+    <p>This dictionary was then used to explore how frequently these terms were used over time in Duterte's speaking events. From the results below, which were normalized to take into account the varying number of speeches Duterte would give each month, it appears that Duterte talked most about the drug war (measured by terms in the drug war dictionary) in the first quarter of 2018 and the first quarter of 2019 &mdash; that is, from January to March of the corresponding years. This makes sense considering the timeline of the Philippines' withdrawal from the ICC. In particular, Duterte announced he would withdraw the country from the international court in March 2018,<sup class="fn"><a href="#fn14" id="fnref14">14</a></sup> after it opened an investigation into his drug war. The decision took effect a year later in March 2019.<sup class="fn"><a href="#fn15" id="fnref15">15</a></sup></p>
+
+    <p>Apart from this, it also appears that while drug war language was minimal from 2014 to 2015, it quickly ramped up in mid-2016, around the time Duterte took office and launched his drug war as national policy. From that point on, it never drops back to pre-presidency levels, save for the first quarter of 2020, which was around the time the Covid-19 pandemic hit and government messaging shifted to lockdown measures.</p>
+
+    <figure class="img-placeholder">
+      <img src="media/image006.png" alt="Figure 6. Normalized frequency of drug war dictionary terms over time, 2014&ndash;2020.">
+      <figcaption>Figure 6. Normalized frequency of drug war dictionary terms over time, 2014&ndash;2020.</figcaption>
+    </figure>
+
+    <p>In addition, the overall high frequency of drug war terms supports the finding that the drug war was not only a policy sustained throughout Duterte's presidency, but also a discursive project he built over a decade, supporting the timeline of ICC investigations.</p>
+
+    <h3 class="subsection-title">Sentiment Analysis</h3>
+    <p>Sentiment analysis methods were also used to understand the overall sentiment of his speeches and to explore the top negative and positive sentences Duterte delivered. By using such methods, the research aimed to explore patterns of negativity and positivity in Duterte's speeches and whether changes could be observed in relation to key events such as the 2016 presidential elections, the first year of Duterte's presidency, and the Philippines' withdrawal from the ICC.</p>
+
+    <p>One key constraint limited the semantic analysis of Duterte's speaking events: the frequent code-switching he engaged in as a habit of speech. Considering that the sentiment package reads only English, Tagalog and Bisaya statements may likely be read and scored as neutral &mdash; masking the overall true sentiment of Duterte's rhetoric.</p>
+
+    <p>Despite this, the results offer some interesting findings. First, sentiment plotted by individual speaking events surprisingly shows Duterte's speech skewing positive. Considering language constraints, this is not surprising since Duterte's English-dominant speaking events were often delivered at ceremonial or diplomatic occasions like inaugurations, state visits, or multilateral events like Association of Southeast Asian Nations summits.</p>
+
+    <figure class="img-placeholder">
+      <img src="media/image007.png" alt="Figure 7. Sentiment score distribution across individual speaking events.">
+      <figcaption>Figure 7. Sentiment score distribution across individual speaking events.</figcaption>
+    </figure>
+
+    <p>A further look at the top 40 most positive sentences confirms this finding. For one, the top 10 most positive sentences below are characterized by formal language and show Duterte was his most diplomatic in international fora or before audiences composed of members of the business community:</p>
+
+    <div class="table-wrap">
+      <table class="sentence-table positive">
+        <caption>Top 10 Most Positive Sentences</caption>
+        <thead>
+          <tr><th>Rank</th><th>Score</th><th>Speech</th><th>Sentence</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="rank">1</td><td class="score">2.020</td><td class="speech">2018-11-20-2-Duterte</td><td>A lot of work remains, but President Xi's visit gives us new impetus to our mutual efforts to enhance collaboration in ensuring the well-being of our peoples and contributing to peace and stability in the region.</td></tr>
+          <tr><td class="rank">2</td><td class="score">1.813</td><td class="speech">2018-04-21-Duterte</td><td>With unity and cooperation, we can build a truly robust nation where opportunities for growth abound and where citizens enjoy a prosperous and comfortable life.</td></tr>
+          <tr><td class="rank">3</td><td class="score">1.754</td><td class="speech">2020-03-24-Duterte</td><td>To the gracious members of the private sector who are foregoing profit to alleviate the suffering of our people; to the valiant volunteers who are bravely supplementing our frontliners; and to the noble civil society organizations who are working tirelessly in calling for donations and performing charity work &mdash; thank you very much for your kindness, compassion and generosity.</td></tr>
+          <tr><td class="rank">4</td><td class="score">1.705</td><td class="speech">2018-05-24-Duterte</td><td>Aside from this bridge being widened from four to six lanes, it is now made a much better and more durable &mdash; made of durable materials as well as equipped with various installations and markers for the safety and convenience of both vehicular and pedestrian traffic.</td></tr>
+          <tr><td class="rank">5</td><td class="score">1.628</td><td class="speech">2018-11-7-2-Duterte</td><td>Working together, let us build a truly robust society where prospects for growth abound and where citizens enjoy a prosperous and comfortable life.</td></tr>
+          <tr><td class="rank">6</td><td class="score">1.593</td><td class="speech">2018-12-13-Duterte</td><td>To Senator Manny Villar, may you have more years to come and I hope that you will continue to inspire and help more Filipinos who also want to uplift their conditions and enjoy more comfortable and progressive lives.</td></tr>
+          <tr><td class="rank">7</td><td class="score">1.589</td><td class="speech">2016-08-21-Duterte</td><td>The Human Rights Commission, I don't know why but they would insist in counting the dead criminals and never make a comparison of the dead victims, innocent people, law-abiding people being killed in the streets at the same time last year.</td></tr>
+          <tr><td class="rank">8</td><td class="score">1.580</td><td class="speech">2016-11-19-1-Duterte</td><td>Mr. President, before I begin, I'd like to thank you very much for your warm hospitality and excellent arrangements extended to us in the Philippine delegation during my State Visit to Beijing.</td></tr>
+          <tr><td class="rank">9</td><td class="score">1.564</td><td class="speech">2019-06-6-Duterte</td><td>Let today's joyful celebration remind us that we need to work in solidarity with one another so that we can achieve a common dream for a more peaceful, just and prosperous Philippines.</td></tr>
+          <tr><td class="rank">10</td><td class="score">1.532</td><td class="speech">2017-11-9-1-Duterte</td><td>We would like to work with you not only to pursue growth through regional economic integration, but also to forge a more humane world characterized by shared peace and optimism in the future.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Notably, Duterte was likewise most &ldquo;positive&rdquo; and diplomatic when he stuck to his prepared remarks. Often, however, the president would speak extemporaneously, which could be seen in later findings on topic models where drug war rhetoric permeated his speeches regardless of topic.</p>
+
+    <p>A breakdown of sentiment plotted by month also shows that Duterte was quite consistent with this rhetoric over time, as the average sentiment (red line) stays close to 0 for most of the corpus' time period. The spread of sentiment scores mostly from &minus;1 to 1 every month also shows that even if average sentiment was close to 0, Duterte wasn't neutral but rather simultaneously very negative and very positive within the same months and in the same speech. In other words, the spread points toward the finding that Duterte often mixed diplomatic language with more negative or violent rhetoric.</p>
+
+    <figure class="img-placeholder">
+      <img src="media/image008.png" alt="Figure 8. Average monthly sentiment (red line) and spread of sentiment scores, 2014&ndash;2020.">
+      <figcaption>Figure 8. Average monthly sentiment (red line) and spread of sentiment scores, 2014&ndash;2020.</figcaption>
+    </figure>
+
+    <p>Again, a look at the top 10 of the top 40 most negative sentences reinforces this finding. For instance, at a speaking event on March 8, 2017, Duterte's extemporaneous speaking style meant he could say a diplomatic sentence &mdash; thanking President Xi Jinping and the Chinese people for their generosity &mdash; at one point in his speech, and also switch to ordering violence when talking to an audience of media and local councilors (see Rank 6, negative sentences).</p>
+
+    <div class="table-wrap">
+      <table class="sentence-table negative">
+        <caption>Top 10 Most Negative Sentences</caption>
+        <thead>
+          <tr><th>Rank</th><th>Score</th><th>Speech</th><th>Sentence</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="rank">1</td><td class="score">&minus;1.812</td><td class="speech">2017-04-29-6-Duterte</td><td>Whatever was the crime: rape with homicide and robbery; robbery with rape, homicide; or homicide, rape.</td></tr>
+          <tr><td class="rank">2</td><td class="score">&minus;1.525</td><td class="speech">2020-12-07-Duterte</td><td>Ronnie E. Ponferrada &ndash; neglect of duty, misconduct, gross neglect; Virgilio Abragan &ndash; grave misconduct; Wilfredo Factoranan &ndash; gross neglect of duty pati si Mario Tubania; Pedro Gerena &ndash; dismissed for grave misconduct; Rolando Palca &ndash; dismissed for [gross neglect of duty]; Engr.</td></tr>
+          <tr><td class="rank">3</td><td class="score">&minus;1.496</td><td class="speech">2017-03-29-Duterte</td><td>But if they confront you with a violent resistance especially if they are armed, and you are in danger of being killed, my God, shoot the idiot and shoot him dead.</td></tr>
+          <tr><td class="rank">4</td><td class="score">&minus;1.471</td><td class="speech">2017-03-13-Duterte</td><td>Robbery, after robbing you rape, then you steal&hellip; Robbery with rape or robbery with homicide, that's a special complex [trial?] Robbery with homicide, or robbery rape with homicide, it should be&hellip; Retribution eh.</td></tr>
+          <tr><td class="rank">5</td><td class="score">&minus;1.467</td><td class="speech">2017-08-16-1-Duterte</td><td>Well, hindi 'yung ano&hellip; 'Yung the&hellip; Well, of course, we are all bleeding hearts here because most of you are really victims of crime and criminality and extreme negligence.</td></tr>
+          <tr><td class="rank">6</td><td class="score">&minus;1.430</td><td class="speech">2017-03-8-Duterte</td><td>But if they resist violently, placing your life in danger, shoot and shoot to kill.</td></tr>
+          <tr><td class="rank">7</td><td class="score">&minus;1.386</td><td class="speech">2016-10-13-Duterte</td><td>And because they are suffering &ndash; suffering heavy losses, you know, there's always a time for retaliation and everything.</td></tr>
+          <tr><td class="rank">8</td><td class="score">&minus;1.379</td><td class="speech">2019-04-21-Duterte</td><td>Maybe only for mayor, but that would be &mdash; this would be my last term of&hellip; Inday vice mayor.</td></tr>
+          <tr><td class="rank">9</td><td class="score">&minus;1.322</td><td class="speech">2019-09-10-2-Duterte</td><td>You know, the social dysfunction created by the drug problem is very enormous, painful, and sorrowful for me and for you.</td></tr>
+          <tr><td class="rank">10</td><td class="score">&minus;1.315</td><td class="speech">2020-11-5-Duterte</td><td>But most of this 'yung misconduct-misconduct, actually that's the administrative term pero kung sa &ndash; tingnan mo 'yang mga crime nila in the penal side, mga falsification 'yan, malversation.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-title">Topic Models</h3>
+    <p>Third, topic models were used to understand how often Duterte spoke about drugs and to confirm if drugs were in fact a dominant topic in Duterte's rhetoric over the course of the six years covered by the corpus. For the use of topic models, a bigram document-feature matrix was created to add more nuance and context to results. In addition, the research initially utilized a K value of 5 and 8, but increased to 10 to get more granular distinctions between topics based on the most frequent and exclusive words found for the top 10 topics of Duterte's speeches.</p>
+
+    <figure class="img-placeholder">
+      <img src="media/image009.png" alt="Figure 9. Structural topic model results, K = 10.">
+      <figcaption>Figure 9. Structural topic model results, K = 10.</figcaption>
+    </figure>
+
+    <p>Reviewing the results above, it can be seen that &ldquo;human_rights&rdquo; and &ldquo;armed_forces&rdquo; permeate as some of the highest-used words despite the topic. The chart also shows that Topic 4 &mdash; press conferences on the drug war &mdash; had the highest proportion in the corpus. For this topic, FREX words included: sec_lape, audience_reacts, ms_macas, ninja_group, lape_yes, ms_lacorte, cars_program, group_ninja, land_group, ms_palo &mdash; the majority of which refer to reporters' last names.</p>
+
+    <p>Based on contextual knowledge of the topic, the fact that &ldquo;human rights&rdquo; is present in all topics further points to the fact that Duterte didn't confine drug war rhetoric to specific occasions but embedded it across governance, diplomacy, and media interactions, as evidenced by the rest of the topics containing these words.</p>
+
+    <h3 class="subsection-title">Word Embeddings &amp; Cosine Similarity</h3>
+    <p>Finally, the research utilized word embeddings to understand and explore semantic relationships that exist with the word &ldquo;drugs&rdquo; in Duterte's speeches. Design choices here included setting the context window to 5 words, as larger context windows often appeared to group words by language rather than semantic or syntactic relationship, since Duterte often code-switched between English, Tagalog/Filipino, and Bisaya when speaking.</p>
+
+    <p>For exploratory purposes, the researcher initially used principal component analysis to reduce the word embedding vectors to two dimensions and examine some semantic and syntactic relationships. A random 150-word sample plotted below shows that there is still some language splitting between English and Filipino words.</p>
+
+    <figure class="img-placeholder">
+      <img src="media/image010.png" alt="Figure 10. Two-dimensional PCA projection of word embeddings, 150-word random sample.">
+      <figcaption>Figure 10. Two-dimensional PCA projection of word embeddings, 150-word random sample.</figcaption>
+    </figure>
+
+    <p>Despite this, some findings emerge. For one, on the center-bottom, words like &ldquo;dugo&rdquo; (blood), &ldquo;bitaw&rdquo; (let go), &ldquo;sira&rdquo; (broken and/or crazy), &ldquo;penal,&rdquo; &ldquo;priority,&rdquo; and &ldquo;politika&rdquo; (politics) sit near each other, describing some of the more general mix of violent language mixed with more governance-related terms.</p>
+
+    <p>To try to understand semantic relationships between some key terms in the drug war and the corpus, further embedding methods focused on the words &ldquo;drugs&rdquo; and &ldquo;kill.&rdquo;</p>
+
+    <p>From this, results showed that apart from other various ways to say drugs like &ldquo;drug&rdquo; and &ldquo;droga,&rdquo; words most similar to &ldquo;drugs&rdquo; included &ldquo;country,&rdquo; &ldquo;stop,&rdquo; &ldquo;corruption,&rdquo; &ldquo;illegal,&rdquo; &ldquo;destroy,&rdquo; &ldquo;kill,&rdquo; and &ldquo;criminality,&rdquo; among others. Considering these words range from 0.43 to 0.3, there seems to be a considerably strong to moderate contextual relationship with the word &ldquo;drugs&rdquo; itself.</p>
+
+    <p>Similarly, words most similar to &ldquo;kill&rdquo; included terms like &ldquo;destroy,&rdquo; &ldquo;country,&rdquo; &ldquo;criminals,&rdquo; &ldquo;crime,&rdquo; and &ldquo;drugs,&rdquo; ranging from 0.64 to 0.34, suggesting a stronger contextual relationship.</p>
+
+    <p>Some final word math (drugs + kill &minus; criminal) aimed to understand what patterns might emerge if Duterte's drug war rhetoric is stripped of terms with criminal framing or context. Results show that violent rhetoric persists even without the criminal conceptual framing. Words like &ldquo;destroy&rdquo; (0.54), &ldquo;die&rdquo; (0.27), and &ldquo;war&rdquo; (0.25) remain prominent. Interestingly, &ldquo;children&rdquo; (0.31) also becomes more prominent, perhaps owing to Duterte's framing of his drug war as one way to &ldquo;save&rdquo; future generations.</p>
+
+    <figure class="img-placeholder">
+      <img src="media/image011.png" alt="Figure 11. Nearest neighbors for the vector drugs + kill &minus; criminal.">
+      <figcaption>Figure 11. Nearest neighbors for the vector drugs + kill &minus; criminal.</figcaption>
+    </figure>
+
+    <p>Moreover, words like &ldquo;treatment,&rdquo; &ldquo;health,&rdquo; &ldquo;arrest,&rdquo; &ldquo;trial,&rdquo; or &ldquo;rehabilitation&rdquo; are notably absent, providing some support for critics' arguments that Duterte's drug war should've been, but was never, framed as a public health problem.<sup class="fn"><a href="#fn16" id="fnref16">16</a></sup></p>
+  </section>
+
+  <section id="conclusion">
+    <h2 class="section-title">Conclusion</h2>
+    <p>When considering what this could mean for a parsing of Duterte's rhetoric at the ICC trials, one could argue that his drug war rhetoric wasn't exceptional; it was embedded in his normal discourse. The sentiment analysis revealed that Duterte maintained a dual register throughout his presidency: he could threaten to kill drug users and praise ASEAN cooperation in the same week, sometimes in the same speech. His average monthly sentiment hovered near zero not because intensely negative and positive language coexisted, not because his language was neutral.</p>
+
+    <p>In this sense, one could argue that Duterte normalized violent drug war rhetoric by weaving it into the fabric of routine presidential discourse rather than confining it to dedicated speeches. The structural topic model reinforced this finding, as the drug war did not emerge as a standalone topic but instead permeated discussions across press conferences, law enforcement briefings, and diplomatic events. Taken together, findings on the frequency of drug war terms, Duterte's consistent sentiment over time, and the distribution of topics show that violent and drug-related language were a constant presence in Duterte's speeches from 2014 to 2020.</p>
+
+    <p>On the other hand, one can also argue that these findings on Duterte's rhetoric alone may not be sufficient to prove responsibility for crimes against humanity, because negative language is often diluted by more formal, positive language when averaged across full speeches. Additionally, the sentiment analysis was constrained by its reliance on English-language lexicons. Tagalog and Bisaya sentences, which likely contained some of the harshest drug war rhetoric, were likely scored as neutral because sentiment tools could not process them. Deeper knowledge of text-as-data methods, including the wrangling of Filipino and Bisaya sentiment, could address these language constraints in future research.</p>
+
+    <p>Findings from word embeddings, however, provide compelling evidence of the rhetoric patterns underlying Duterte's drug war. The cosine similarity analysis revealed strong semantic relationships between &ldquo;drugs&rdquo; and violent terms like &ldquo;kill&rdquo; and &ldquo;destroy.&rdquo; Crucially, the semantic neighborhood around &ldquo;drugs&rdquo; was dominated entirely by criminal and security framing, with no public health language such as &ldquo;rehabilitation,&rdquo; &ldquo;treatment,&rdquo; or &ldquo;health&rdquo; appearing among the nearest neighbors.</p>
+
+    <p>Word vector arithmetic further demonstrated that subtracting &ldquo;criminal&rdquo; from the combined drugs-and-kill vector changed little. The same violent terms persisted, suggesting that the violence in Duterte's rhetoric was not contingent on criminal justice rationale but existed as part of his policy against drugs.</p>
+
+    <p>Building on this, patterns and trends in Duterte's speech should be grounded in case-building and documentary evidence that could further strengthen arguments that other elements of crimes against humanity &mdash; particularly that the drug war was widespread and systematic, and that Duterte had knowledge of plans and a structure for carrying out the campaign &mdash; were in place.</p>
+
+    <p>Taking stock, the descriptive analysis presented here establishes that Duterte publicly and repeatedly articulated a framework in which drugs were a national threat, killing was a response, and legal or health-based alternatives were absent from his discourse. Whether this rhetoric translated into command responsibility remains a question for legal analysis beyond the scope of this project.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section id="bibliography">
+    <h2 class="section-title">Bibliography</h2>
+
+    <p class="bib-entry">Bascos, Vincent. &ldquo;Duterte on how to fight crime: 'It had to be bloody.'&rdquo; <em>Rappler.</em> July 3, 2015. <a href="https://www.rappler.com/philippines/elections/98306-duterte-fight-crime/" target="_blank" rel="noopener">rappler.com/philippines/elections/98306-duterte-fight-crime</a></p>
+
+    <p class="bib-entry">Balagtas-See, Aie. &ldquo;Were Duterte's Speeches Orders to Kill or Hyperbole? &ndash; The New York Times.&rdquo; February 27, 2016. Accessed April 30, 2026. <a href="https://www.nytimes.com/2026/02/27/world/asia/rodrigo-duterte-icc-trial-hague.html" target="_blank" rel="noopener">nytimes.com/2026/02/27/world/asia/rodrigo-duterte-icc-trial-hague.html</a></p>
+
+    <p class="bib-entry">Buan, Lian, and Jodesz Gavilan. &ldquo;Duterte Throws Out Decade-Long Fight for the International Criminal Court.&rdquo; <em>Rappler.</em> March 13, 2019. <a href="https://www.rappler.com/features/newsbreak/in-depth/225454-philippines-duterte-withdrawal-international-criminal-court/index.html" target="_blank" rel="noopener">rappler.com &hellip; philippines-duterte-withdrawal-international-criminal-court</a></p>
+
+    <p class="bib-entry">Diaz, Gene. &ldquo;Stopwords Tagalog (TL).&rdquo; GitHub. Accessed April 16, 2026. <a href="https://github.com/stopwords-iso/stopwords-tl/blob/master/README.md" target="_blank" rel="noopener">github.com/stopwords-iso/stopwords-tl</a></p>
+
+    <p class="bib-entry">Ellis-Petersen, Hannah. &ldquo;Rodrigo Duterte to Pull Philippines out of International Criminal Court.&rdquo; <em>The Guardian.</em> March 14, 2018. <a href="https://www.theguardian.com/world/2018/mar/14/rodrigo-duterte-to-pull-philippines-out-of-international-criminal-court-icc" target="_blank" rel="noopener">theguardian.com &hellip; pull-philippines-out-of-international-criminal-court-icc</a></p>
+
+    <p class="bib-entry">Esmaquel, Paterno. &ldquo;Complaint vs Duterte Filed Before Int'l Criminal Court.&rdquo; <em>Rappler.</em> April 24, 2017. <a href="https://www.rappler.com/philippines/167818-complaint-duterte-international-criminal-court/" target="_blank" rel="noopener">rappler.com/philippines/167818-complaint-duterte-international-criminal-court</a></p>
+
+    <p class="bib-entry">Evangelista, Patricia. &ldquo;OPINION: Rodrigo Duterte Is a Man of His Word.&rdquo; <em>Rappler.</em> March 11, 2026. <a href="https://www.rappler.com/voices/thought-leaders/rodrigo-duterte-power-words-kill-drug-war/" target="_blank" rel="noopener">rappler.com/voices/thought-leaders/rodrigo-duterte-power-words-kill-drug-war</a></p>
+
+    <p class="bib-entry">Evangelista, Patricia. &ldquo;This Is Where They Do Not Die.&rdquo; <em>Rappler.</em> November 25, 2017. <a href="https://www.rappler.com/features/newsbreak/investigative/188904-impunity-series-police-killings-quezon-city-ejk/index.html" target="_blank" rel="noopener">rappler.com &hellip; impunity-series-police-killings-quezon-city-ejk</a></p>
+
+    <p class="bib-entry">Evangelista, Patricia. &ldquo;The Bully.&rdquo; <em>Rappler.</em> March 31, 2016. <a href="https://www.rappler.com/features/nation/elections/126341-the-bully-rodrigo-duterte/index.html" target="_blank" rel="noopener">rappler.com/features/nation/elections/126341-the-bully-rodrigo-duterte</a></p>
+
+    <p class="bib-entry">Gavilan, Jodesz. &ldquo;Rodrigo Duterte's Own Words Used Against Him at ICC Pre-Trial Hearing.&rdquo; <em>Rappler.</em> February 23, 2026. <a href="https://www.rappler.com/philippines/icc-prosecution-uses-rodrigo-duterte-drug-war-own-words-against-him-hearing-february-23-2026/" target="_blank" rel="noopener">rappler.com &hellip; icc-prosecution-uses-rodrigo-duterte-drug-war-own-words-against-him</a></p>
+
+    <p class="bib-entry">Geronimo, Jee. &ldquo;Drug Addiction Is a Health Problem. Somebody Please Tell the President.&rdquo; <em>Rappler.</em> June 29, 2017. <a href="https://www.rappler.com/philippines/174021-drug-addiction-duterte-war-drugs/" target="_blank" rel="noopener">rappler.com/philippines/174021-drug-addiction-duterte-war-drugs</a></p>
+
+    <p class="bib-entry">Nierenberg, Amelia. &ldquo;Duterte to Stand Trial for Crimes Against Humanity at ICC.&rdquo; <em>New York Times.</em> April 23, 2026. <a href="https://www.nytimes.com/2026/04/23/world/asia/duterte-icc-trial-drug-war.html" target="_blank" rel="noopener">nytimes.com/2026/04/23/world/asia/duterte-icc-trial-drug-war.html</a></p>
+
+    <p class="bib-entry">News Agencies. &ldquo;Philippines Officially Out of the International Criminal Court.&rdquo; <em>Al Jazeera.</em> March 14, 2019. <a href="https://www.aljazeera.com/news/2019/3/17/philippines-officially-out-of-the-international-criminal-court" target="_blank" rel="noopener">aljazeera.com &hellip; philippines-officially-out-of-the-international-criminal-court</a></p>
+
+    <p class="bib-entry">Nunez, Emmanuel. &ldquo;English, Tagalog, and Cebuano Stop Words in Python.&rdquo; Accessed April 26, 2026. <a href="https://github.com/eanunez/stop_words/blob/master/stop_words.py" target="_blank" rel="noopener">github.com/eanunez/stop_words</a></p>
+
+    <p class="bib-entry">Ramzy, Austin. &ldquo;Philippines' New President, Rodrigo Duterte, Vows Tough Stance on Crime.&rdquo; <em>New York Times.</em> June 20, 2016. <a href="https://www.nytimes.com/2016/07/01/world/asia/philippines-duterte.html" target="_blank" rel="noopener">nytimes.com/2016/07/01/world/asia/philippines-duterte.html</a></p>
+
+    <p class="bib-entry">Sarao, Zacarian. &ldquo;'Kill Them All': Policy That Triggered ICC Case vs Rodrigo Duterte.&rdquo; <em>INQUIRER.net.</em> February 16, 2026. <a href="https://globalnation.inquirer.net/309281/kill-them-all-policy-that-triggered-icc-case-vs-rodrigo-duterte" target="_blank" rel="noopener">globalnation.inquirer.net/309281 &hellip;</a></p>
+
+    <p class="bib-entry">Sotelo, Gabriel Cardinoza, and Germelina Lacorte Yolanda. &ldquo;Duterte 'Eyes' Presidency in 2016 to Save PH from 'Disaster.'&rdquo; <em>INQUIRER.net.</em> February 19, 2015. <a href="https://newsinfo.inquirer.net/673999/duterte-eyes-presidency-in-2016-to-save-ph-from-disaster" target="_blank" rel="noopener">newsinfo.inquirer.net/673999 &hellip;</a></p>
+  </section>
+
+  <hr class="rule">
+
+  <section id="footnotes">
+    <h2 class="section-title">Footnotes</h2>
+    <ol>
+      <li id="fn1">Sotelo, Gabriel Cardinoza, Germelina Lacorte Yolanda. &ldquo;Duterte 'Eyes' Presidency in 2016 to Save PH from 'Disaster.'&rdquo; <em>INQUIRER.net</em>, February 19, 2015. <a href="https://newsinfo.inquirer.net/673999/duterte-eyes-presidency-in-2016-to-save-ph-from-disaster" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref1">&#8617;</a></li>
+      <li id="fn2">Evangelista, Patricia. &ldquo;The Bully.&rdquo; <em>Rappler.</em> March 31, 2016. <a href="https://www.rappler.com/features/nation/elections/126341-the-bully-rodrigo-duterte/index.html" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref2">&#8617;</a></li>
+      <li id="fn3">Bascos, Vincent. &ldquo;Duterte on how to fight crime: 'It had to be bloody.'&rdquo; <em>Rappler.</em> July 3, 2015. <a href="https://www.rappler.com/philippines/elections/98306-duterte-fight-crime/" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref3">&#8617;</a></li>
+      <li id="fn4">Sarao, Zacarian. &ldquo;'Kill Them All': Policy That Triggered ICC Case vs Rodrigo Duterte.&rdquo; <em>INQUIRER.net.</em> February 16, 2026. <a href="https://globalnation.inquirer.net/309281/kill-them-all-policy-that-triggered-icc-case-vs-rodrigo-duterte" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref4">&#8617;</a></li>
+      <li id="fn5">Ramzy, Austin. &ldquo;Philippines' New President, Rodrigo Duterte, Vows Tough Stance on Crime.&rdquo; <em>New York Times.</em> June 20, 2016. <a href="https://www.nytimes.com/2016/07/01/world/asia/philippines-duterte.html" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref5">&#8617;</a></li>
+      <li id="fn6">Evangelista, Patricia. &ldquo;OPINION: Rodrigo Duterte Is a Man of His Word.&rdquo; <em>Rappler.</em> March 11, 2026. <a href="https://www.rappler.com/voices/thought-leaders/rodrigo-duterte-power-words-kill-drug-war/" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref6">&#8617;</a></li>
+      <li id="fn7">Evangelista, Patricia. &ldquo;This Is Where They Do Not Die.&rdquo; <em>Rappler.</em> November 25, 2017. <a href="https://www.rappler.com/features/newsbreak/investigative/188904-impunity-series-police-killings-quezon-city-ejk/index.html" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref7">&#8617;</a></li>
+      <li id="fn8">&ldquo;Duterte to Stand Trial for Crimes Against Humanity at ICC.&rdquo; <em>New York Times.</em> April 23, 2026. <a href="https://www.nytimes.com/2026/04/23/world/asia/duterte-icc-trial-drug-war.html" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref8">&#8617;</a></li>
+      <li id="fn9">Gavilan, Jodesz. &ldquo;Rodrigo Duterte's Own Words Used Against Him at ICC Pre-Trial Hearing.&rdquo; <em>Rappler.</em> February 23, 2026. <a href="https://www.rappler.com/philippines/icc-prosecution-uses-rodrigo-duterte-drug-war-own-words-against-him-hearing-february-23-2026/" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref9">&#8617;</a></li>
+      <li id="fn10">Esmaquel, Paterno. &ldquo;Complaint vs Duterte Filed Before Int'l Criminal Court.&rdquo; <em>Rappler.</em> April 24, 2017. <a href="https://www.rappler.com/philippines/167818-complaint-duterte-international-criminal-court/" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref10">&#8617;</a></li>
+      <li id="fn11">Buan, Lian, and Jodesz Gavilan. &ldquo;Duterte Throws Out Decade-Long Fight for the International Criminal Court.&rdquo; <em>Rappler.</em> March 13, 2019. <a href="https://www.rappler.com/features/newsbreak/in-depth/225454-philippines-duterte-withdrawal-international-criminal-court/index.html" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref11">&#8617;</a></li>
+      <li id="fn12">Diaz, Gene. &ldquo;Stopwords Tagalog (TL).&rdquo; GitHub. Accessed April 16, 2026. <a href="https://github.com/stopwords-iso/stopwords-tl/blob/master/README.md" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref12">&#8617;</a></li>
+      <li id="fn13">Nunez, Emmanuel. &ldquo;English, Tagalog, and Cebuano Stop Words in Python.&rdquo; Accessed April 26, 2026. <a href="https://github.com/eanunez/stop_words/blob/master/stop_words.py" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref13">&#8617;</a></li>
+      <li id="fn14">Ellis-Petersen, Hannah. &ldquo;Rodrigo Duterte to Pull Philippines out of International Criminal Court.&rdquo; <em>The Guardian.</em> March 14, 2018. <a href="https://www.theguardian.com/world/2018/mar/14/rodrigo-duterte-to-pull-philippines-out-of-international-criminal-court-icc" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref14">&#8617;</a></li>
+      <li id="fn15">News Agencies. &ldquo;Philippines Officially Out of the International Criminal Court.&rdquo; <em>Al Jazeera.</em> March 14, 2019. <a href="https://www.aljazeera.com/news/2019/3/17/philippines-officially-out-of-the-international-criminal-court" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref15">&#8617;</a></li>
+      <li id="fn16">Geronimo, Jee. &ldquo;Drug Addiction Is a Health Problem. Somebody Please Tell the President.&rdquo; <em>Rappler.</em> June 29, 2017. <a href="https://www.rappler.com/philippines/174021-drug-addiction-duterte-war-drugs/" target="_blank" rel="noopener">Link</a>. <a class="back" href="#fnref16">&#8617;</a></li>
+    </ol>
+  </section>
+
+  <footer class="page-footer">
+    Text-as-Data Analysis &middot; Duterte Drug War Corpus, 2014&ndash;2020
+  </footer>
+
+</div>
+</body>
+</html>
